@@ -1,1 +1,79 @@
-Hey
+# GitHub README for Mistral 7B Instruct Chatbot
+
+## Overview
+This repository contains a simple chatbot application developed using Python, Streamlit, and the Mistral 7B Instruct model. The chatbot is designed for conversational image recognition and utilizes the Langchain library for managing chat history.
+
+## Features
+- **Conversational Interface**: Users can interact with the chatbot through a user-friendly interface.
+- **Image Recognition**: The chatbot can recognize and respond to queries related to images.
+- **Session Management**: Maintains conversation history using Streamlit's session state.
+
+## Prerequisites
+Before running the application, ensure you have the following installed:
+- Python 3.7 or higher
+- Pip (Python package installer)
+
+## Setup Instructions
+
+### 1. Create a Virtual Environment
+To avoid conflicts with other projects, it is recommended to create a virtual environment. Follow these steps:
+
+```bash
+# Navigate to your project directory
+cd your_project_directory
+
+# Create a virtual environment named 'venv'
+python -m venv venv
+
+# Activate the virtual environment
+# On Windows
+venv\Scripts\activate
+# On macOS/Linux
+source venv/bin/activate
+```
+
+### 2. Install Required Packages
+Once your virtual environment is activated, install the necessary packages:
+
+```bash
+pip install streamlit langchain transformers torch
+```
+
+### 3. Download Mistral 7B Instruct Model from Hugging Face
+To use the Mistral 7B Instruct model, you need to download it from Hugging Face. Follow these steps:
+
+1. Visit the [Hugging Face Model Hub](https://huggingface.co/models).
+2. Search for "Mistral 7B Instruct".
+3. Click on the model name to access its page.
+4. Use the following command in your terminal to download the model:
+
+```bash
+from transformers import AutoModelForCausalLM
+
+model = AutoModelForCausalLM.from_pretrained("mistral/mistral-7b-instruct")
+```
+
+### 4. Run the Application
+After setting up your environment and downloading the model, you can run the chatbot application using Streamlit:
+
+```bash
+streamlit run app.py
+```
+
+## Usage
+1. Open your web browser and navigate to `http://localhost:8501`.
+2. Type your message in the input field and click "Send".
+3. The chatbot will respond based on your input.
+
+## Contributing
+Feel free to contribute by creating issues or submitting pull requests.
+
+## License
+This project is licensed under the MIT License.
+
+---
+
+This README provides a comprehensive guide for users to set up and run your chatbot application effectively. Make sure to replace placeholders like `your_project_directory` with actual paths relevant to your setup.
+
+Citations:
+[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/51065571/baa06009-8881-4fd4-8742-ca4e16734dea/app.py
